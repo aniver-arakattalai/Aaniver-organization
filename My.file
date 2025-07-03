@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaniver Organization - Blood Donor Registration</title>
+
+    <meta property="og:title" content="Join Aaniver Organization - Save Lives Through Blood Donation">
+    <meta property="og:description" content="Register as a blood donor and help save lives. Join with us as a donor.">
+    <meta property="og:image" content="https://i.ibb.co/8LBCGphm/file-00000000dd38622f8802499c3ec1677a.png">
+    <meta property="og:url" content="https://your-domain.com/blood-donor-registration">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join Aaniver Organization - Save Lives Through Blood Donation">
+    <meta name="twitter:description" content="Register as a blood donor and help save lives. Join with us as a donor.">
+    <meta name="twitter:image" content="https://i.ibb.co/8LBCGphm/file-00000000dd38622f8802499c3ec1677a.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .header {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('https://i.ibb.co/8LBCGphm/file-00000000dd38622f8802499c3ec1677a.png') center/cover;
+            color: #2c3e50;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid #e74c3c;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(231, 76, 60, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(255, 107, 107, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, rgba(116, 185, 255, 0.06) 0%, transparent 50%);
+            animation: floatingShapes 8s ease-in-out infinite;
+        }
+
+        @keyframes floatingShapes {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #e74c3c, #ff6b6b, #ee5a52, #ff7675);
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .header h1 {
+    font-size: 3.22em;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    color: #087830;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-weight: bold;
+    /* Add or modify this line */
+    font-family: "Helvetica", sans-serif; /* Example: using Arial */
+}
+
+        .header h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            font-size: 1.3em;
+        }
+
+        .header h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            font-size: 1.5em;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #34495e;
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .header-logo {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 15px;
+            border: 3px solid rgba(231, 76, 60, 0.3);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .content-logo-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(255, 107, 107, 0.1));
+            border-radius: 15px;
+            border: 2px dashed rgba(231, 76, 60, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-logo-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, transparent 45%, rgba(231, 76, 60, 0.05) 50%, transparent 55%);
+            background-size: 300% 300%;
+            animation: shine 3s infinite linear;
+            z-index: 1;
+        }
+
+        @keyframes shine {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .content-logo {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 12px rgba(231, 76, 60, 0.3));
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .urgency {
+            background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .urgency::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.2) 50%, transparent 55%);
+            background-size: 300% 300%;
+            animation: shine 3s infinite linear;
+        }
+
+        .urgency-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 25px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(231, 76, 60, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #e74c3c, #ff6b6b);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.1);
+        }
+
+        .stat-item:hover::after {
+            transform: scaleX(1);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            color: #666;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .features {
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid transparent;
+        }
+
+        .feature:hover {
+            background: #fff;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.1);
+            border-left: 4px solid #e74c3c;
+        }
+
+        .feature-icon {
+            font-size: 1.8em;
+            margin-right: 20px;
+            color: #e74c3c;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        /* Enhanced Contact Section */
+        .contact-section {
+            margin: 50px 0 30px;
+        }
+
+        .contact-heading {
+            text-align: center;
+            font-size: 2.2em;
+            color: #e74c3c;
+            margin-bottom: 40px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .contact-heading::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e9ecef;
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(231, 76, 60, 0.05) 50%, transparent 70%);
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(231, 76, 60, 0.2);
+            border-color: #e74c3c;
+        }
+
+        .contact-card:hover::before {
+            animation: shimmer 0.6s ease-in-out;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .contact-avatar {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2em;
+            color: white;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .contact-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-role {
+            font-size: 1.1em;
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-details {
+            margin: 20px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(231, 76, 60, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(231, 76, 60, 0.1);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            font-size: 1.3em;
+            margin-right: 12px;
+            color: #e74c3c;
+            min-width: 30px;
+        }
+
+        .contact-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        .contact-quote {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 1em;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(231, 76, 60, 0.05);
+            border-left: 4px solid #e74c3c;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            line-height: 1.6;
+        }
+
+        .contact-quote::before {
+            content: '"';
+            font-size: 2em;
+            color: #e74c3c;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            opacity: 0.3;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c, #ff6b6b, #ee5a52);
+            background-size: 200% 200%;
+            color: white;
+            padding: 20px 50px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            animation: buttonGlow 3s ease infinite, buttonPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes buttonGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes buttonPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00b894, #00cec9, #74b9ff);
+            background-size: 200% 200%;
+            color: white;
+            padding: 20px 50px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 184, 148, 0.4);
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            animation: buttonGlow 3s ease infinite, buttonPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes buttonGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes buttonPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 184, 148, 0.6);
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+       
+       /* Tamil Text Styles - Add this new section */
+.tamil-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 15px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.tamil-left-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    font-size: 1.9em;
+    line-height: 1.5;
+    color: #228B22;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-weight: bold
+}
+
+.tamil-right-text {
+    font-size: 5.9em;
+    font-weight: bold;
+    color: #e74c3c;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    line-height: 1.08;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tamil-left-text {
+        font-size: 1.3em;
+    }
+    .tamil-right-text {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .tamil-left-text {
+        font-size: 1.1em;
+    }
+    .tamil-right-text {
+        font-size: 1.8em;
+    }
+}
+        /* WhatsApp Button Styles */
+        .whatsapp-button-container {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #25D366;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            border: none;
+            cursor: pointer;
+            min-width: 200px;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+            background: #1DA851;
+        }
+
+        .whatsapp-icon {
+            font-size: 1.6em;
+            margin-right: 10px;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+
+            .header {
+                padding: 40px 20px;
+                background-size: cover;
+            }
+
+            .header-logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header h3 {
+                font-size: 1.2em;
+            }
+
+            .header h2 {
+                font-size: 1.3em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stat-item {
+                min-width: 100%;
+            }
+
+            .contact-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-card {
+                padding: 25px 20px;
+            }
+
+            .contact-heading {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+
+            .combined-heading {
+                font-size: 1.1em;
+            }
+            
+            .large-red-text {
+                font-size: 1.5em;
+            }
+
+            .cta-button {
+                padding: 16px 40px;
+                font-size: 1.1em;
+            }
+
+            .whatsapp-button {
+                padding: 12px 20px;
+                font-size: 1em;
+                min-width: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 30px 15px;
+            }
+
+            .header-logo {
+                width: 130px;
+                height: 130px;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content-logo {
+                width: 140px;
+                height: 140px;
+            }
+
+            .urgency-text {
+                font-size: 1em;
+            }
+
+            .feature {
+                padding: 15px;
+            }
+
+            .feature-icon {
+                font-size: 1.5em;
+                margin-right: 15px;
+            }
+
+            .contact-avatar {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8em;
+            }
+
+            .contact-name {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+    <img src="https://i.ibb.co/Qj8FWhd1/Aab.png" alt="Blood Donation Logo" class="header-logo">
+    <h1>Aaniver Organization</h1>
+    <h3>இரத்த தானம் செய்வோம்! மனிதநேயம் வளர்ப்போம்!</h3>
+    
+    <div class="tamil-text-container">
+        <div class="tamil-left-text">
+            <span>உதிரக்</span>
+            <span>உயிர்</span>
+        </div>
+        <div class="tamil-right-text">
+            <span>கொடை</span>
+        </div>
+    </div>
+    
+    <p>Join Our Life-Saving Blood Donor Community</p>
+</div>
+
+        <div class="content">
+            <div class="urgency">
+                <p class="urgency-text">⚡ Every 2 seconds, someone in India needs blood. Your registration could save a life today!</p>
+            </div>
+
+            <div class="content-logo-container">
+                <img src="https://i.ibb.co/qM9px6RR/Aa294.png" alt="Aaniver Organization Logo" class="content-logo">
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">38K</div>
+                    <div class="stat-label">Units of Blood Are Needed Every Day</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12K</div>
+                    <div class="stat-label">People Die Each Day Due to Lack of Blood Donors Shortage</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Lives Saved</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">🎯</span>
+                    <div>
+                        <strong>Quick Registration:</strong> Takes only 3-5 minutes to complete
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔒</span>
+                    <div>
+                        <strong>100% Secure:</strong> Your data is completely safe and private
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📱</span>
+                    <div>
+                        <strong>Easy Contact:</strong> We'll only reach you when blood is urgently needed
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🌟</span>
+                    <div>
+                        <strong>Be a Hero:</strong> One donation can save up to 3 lives
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2 class="contact-heading">💬 Connect With Our Heroes</h2>
+
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-avatar">👨‍💼</div>
+                        <div class="contact-name">Santhakumar</div>
+                        <div class="contact-role">Founder & Visionary</div>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <a href="mailto:aanivercbe@gmail.com" class="contact-link">aanivercbe@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <a href="tel:+919791303018" class="contact-link">9791303018</a>
+                            </div>
+                        </div>
+                        <div class="whatsapp-button-container">
+                            <a href="https://wa.me/919791303018?text=Hello%20Santhakumar,%20I'm%20interested%20in%20blood%20donation." class="whatsapp-button" target="_blank">
+                                <span class="whatsapp-icon">📱</span> Chat on WhatsApp
+                            </a>
+                        </div>
+                        <div class="contact-quote">
+                            "Every drop of blood donated is a drop of hope for someone fighting for their life."
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-avatar">🤝</div>
+                        <div class="contact-name">Peter</div>
+                        <div class="contact-role">Coordinator & Life Connector</div>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <a href="mailto:arokiapeter49@gmail.com" class="contact-link">arokiapeter49@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <a href="tel:+919791982638" class="contact-link">9791982638</a>
+                            </div>
+                        </div>
+                        <div class="whatsapp-button-container">
+                            <a href="https://wa.me/919791982638?text=Hello%20Peter,%20I'm%20interested%20in%20blood%20donation." class="whatsapp-button" target="_blank">
+                                <span class="whatsapp-icon">📱</span> Chat on WhatsApp
+                            </a>
+                        </div>
+                        <div class="contact-quote">
+                            "Being a bridge between donors and recipients is the most rewarding job in the world."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card" style="margin-top: 30px;">
+                    <div class="contact-avatar">🏢</div>
+                    <div class="contact-name">Aaniver Organization</div>
+                    <div class="contact-role">Headquarters</div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <a href="mailto:aanivercbe@gmail.com" class="contact-link">aanivercbe@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                NO: 4, OOR GOUNDER STREET, MARUTHAPURAM,<br>
+                                BHARATHIAR UNIVERSITY POST, COIMBATORE - 641046
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-quote">
+                        "Where compassion meets action, and lives are transformed through the gift of blood."
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+    <a href="https://forms.gle/hPJgfPTHKPWCLL937" class="cta-button" target="_blank">
+        Register as Blood Donor
+    </a>
+</div>
+
+
+            <div class="footer">
+                <p>Join thousands of heroes who choose to save lives through blood donation</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click tracking for CTA button
+            const ctaButton = document.querySelector('.cta-button');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', function() {
+                    console.log('Blood donor registration clicked - Aaniver Organization');
+                    // You can add analytics tracking here like:
+                    // ga('send', 'event', 'Button', 'Click', 'Register as Blood Donor');
+                });
+            }
+
+            // Add hover effects to stats with delay
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+                
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add ripple effect to buttons
+            const buttons = document.querySelectorAll('.cta-button, .whatsapp-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const x = e.clientX - e.target.getBoundingClientRect().left;
+                    const y = e.clientY - e.target.getBoundingClientRect().top;
+                    
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                        window.open(this.href, '_blank');
+                    }, 600);
+                });
+            });
+
+            // Add animation to features when they come into view
+            const features = document.querySelectorAll('.feature');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            features.forEach((feature, index) => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateX(-20px)';
+                feature.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(feature);
+            });
+
+            // Add logo animation on hover
+            const headerLogo = document.querySelector('.header-logo');
+            if (headerLogo) {
+                headerLogo.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.05)';
+                });
+                
+                headerLogo.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
